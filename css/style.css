@@ -1,0 +1,979 @@
+@font-face{
+  font-family:'FranklinGothicLTCom_Dm';
+  src:url("../fonts/FranklinGothicLTCom_Dm/FranklinGothicLTCom_Dm.eot");
+  src:url("../fonts/FranklinGothicLTCom_Dm/FranklinGothicLTCom_Dm.eot?#iefix")
+  format("embedded-opentype"),
+  url("../fonts/FranklinGothicLTCom_Dm/FranklinGothicLTCom_Dm.ttf")
+  format("truetype"),url("../fonts/FranklinGothicLTCom_Dm/FranklinGothicLTCom_Dm.svg#icon")
+  format("svg");
+  font-weight:normal;
+  font-style:normal
+}
+
+.billboard img{
+  padding:10px 0px 10px 0px;
+}
+.info-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  position: relative;
+}
+
+.info-wrapper span.more{
+  top:56px;
+}
+
+.info-wrapper span.less{
+  top:56px;
+}
+.info {
+  -webkit-transition: height 0.4s;
+-moz-transition:height 0.4s;
+-ms-transition: height 0.4s;
+-o-transition: height 0.4s;
+transition: height 0.4s;
+  height: 96px;
+  padding: .5em 0;
+  border-bottom: solid 1px #fff;
+  border-radius: 0 0 1em 1em;
+  overflow: hidden;
+  position: relative;
+}
+.info:after, .aftershadow {
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  border-radius: 0 0 1em 1em;
+  position: absolute;
+  background: -webkit-linear-gradient(rgba(192,192,192,0), #FFF);
+  background: -moz-linear-gradient(rgba(192,192,192,0), #FFF);
+  background: -ms-linear-gradient(rgba(192,192,192,0), #FFF);
+  background: -o-linear-gradient(rgba(192,192,192,0), #FFF);
+  background: linear-gradient(rgba(192,192,192,0), #FFF);
+  content: '';
+}
+.aftershadow {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00cccccc, endColorstr=#ffcccccc);
+}
+
+.open.info:after{
+  background:none !important
+}
+
+
+.info-wrapper a {
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 25px;;
+  margin: 0px;
+  border-bottom: solid 1px #fff;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  color: #E1192C;
+  font-family:Helvetica;
+  font-size:14px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.info-wrapper a:focus { outline: none; }
+.info-wrapper .less { margin-top: -1.5em; display:none; }
+
+
+body,html,*{
+  margin:0px;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+a:focus, a:hover {
+  color: #E1192C;
+  text-decoration: none;
+}
+
+
+.affix.lhs {
+  top: 60px;
+  margin-top: 10px ;
+  display:block;
+  z-index: 9999 !important;
+  padding:50px 0px 10px 0px;
+  background:#F8F8F8;
+}
+
+
+.map-img:hover:after{
+  position:absolute;
+  z-index:999;
+  left:0px;
+  top:50px;
+  padding-top:90px;
+  height:212px;
+  width:300px;
+  font-size:16px;
+  background:rgba(0,0,0,0.6);
+  font-weight:bold;
+  font-family:helvetica;
+  text-align:center;
+  margin:0 auto;
+  text-transform: uppercase;
+  color:#FFF;
+  letter-spacing: 4px;
+  content:"Expand Map";
+
+}
+
+
+.map-button{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:2000;
+  width: 60px;
+  height: 60px;
+  margin-top:20px;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: #E1192C;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.map-button i{
+  color: #FFF;
+    font-size: 38px;
+    top: left;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    padding: 24px 0px 20px 10px;
+    line-height: 67px;
+}
+
+
+.intro{
+  margin-bottom:20px;
+}
+
+.intro h2{
+  font-family:Georgia;
+  margin-top:30px;
+  font-weight:normal;
+}
+
+.intro-avatar{
+  width: 60px;
+  height: 60px;
+  margin-top:20px;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 2px solid #1a1a1a;
+  background-color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.intro-author,.intro-date{
+  font-size:14px;
+  text-align:center;
+  margin-top:14px;
+  font-family:Georgia;
+  line-height:20px;
+}
+
+.intro-date{
+  margin-top:3px;
+}
+
+.intro h1{
+  font-family:"FranklinGothicLTCom_Dm";
+  padding-top:50px;
+}
+
+
+.no-padding{
+  padding:0px;
+}
+
+.bg-grey{
+  background:#F8F8F8;
+}
+
+.bg-black{
+  color:#FFF;
+  background:#000;
+}
+
+.bg-white{
+  color:#000;
+  background:#FFF;
+}
+
+.bg-red{
+  color:#000;
+  background:#FFF;
+}
+
+.color-red{
+  color:#E1192C;
+}
+
+.color-grey{
+  color:#DDDDDD
+}
+
+.lhs{
+  margin:50px 0px 20px 0px;
+
+}
+
+
+.single-card{
+  display:inline-block;
+  margin-top:40px;
+}
+
+.single-card:first-child{
+  margin-top:0px;
+}
+
+
+.lists-card{
+  margin:50px 0px 20px 0px;
+}
+
+.lists-card .list-number{
+  width:40px;
+  position:absolute;
+  z-index:1000;
+  height:40px;
+  line-height:40px;
+  font-size:22px;
+  text-align:center;
+  font-family:Helvetica;
+  font-weight:bold;
+  background:#000;
+  display:block;
+  color:#FFF;
+}
+
+
+
+
+.single-card .img-left {
+  z-index:2;
+}
+
+.slug{
+  font-family:"FranklinGothicLTCom_Dm";
+  font-size:14px;
+  color:#1a1a1a;
+}
+
+.slug:after{
+  margin-bottom:11px;
+  content:"";
+  display:block;
+  height:2px;
+}
+
+.things-to-do.slug:after{
+  background:#9fbe44;
+  width:80px;
+}
+
+.bars.slug:after{
+  background:#26a1ac;
+  width:30px;
+}
+
+.shopping.slug:after{
+  background:#ffe500;
+  width:59px;
+}
+
+.nightlife.slug:after{
+  background:#6bbceb;
+  width:51px;
+}
+
+
+.restaurants.slug:after{
+  background:#5aafad;
+  width:78px;
+}
+
+
+h3.title{
+  font-family:"FranklinGothicLTCom_Dm";
+  margin-right:20px;
+
+}
+
+h3.title:hover{
+  text-decoration:underline;
+}
+
+h3.title:after {
+  right: 0;
+  font-size: 20px;
+    content: "\6c";
+    font-family: "time-out-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    height: inherit;
+    line-height:inherit;
+    vertical-align: middle;
+  }
+
+.card-content .date{
+  font-size:14px;
+  font-family:Helvetica;
+  line-height:25px;
+  height:32px;
+  margin-top:6px;
+  vertical-align: middle;
+}
+
+.date .icon-calendar{
+  font-size:19px;
+  line-height:25px;
+  margin-right:10px;
+  height:32px;
+  vertical-align: middle;
+}
+
+.wiiwyg{
+  margin-bottom:11px;
+}
+
+
+
+
+
+
+
+.to-says{
+  font-size:14px;
+  font-family:"FranklinGothicLTCom_Dm";
+  display:inline;
+  text-transform: uppercase;
+  line-height:25px;
+  height:32px;
+  vertical-align: middle;
+}
+
+.to-says .icon-star{
+  height:32px;
+  vertical-align: middle;
+}
+
+
+
+.filters{
+  margin:0 auto;
+  z-index:10000;
+  padding-bottom:10px;
+}
+
+.filters .container-full{
+  margin:0 auto;
+  text-align:center;
+
+}
+.filter-datepicker{
+  padding:0px;
+
+  width:307px;
+  height: 30px;
+  cursor:pointer;
+  display:inline-block;
+}
+
+.filter-datepicker .date .icon-calendar{
+  margin-right:0px;
+  color:#FFF;
+}
+
+.filter-datepicker .input-group-addon{
+  background:#1a1a1a;
+  border: 2px solid #1a1a1a;
+}
+
+.filter-datepicker .form-control{
+  color:#1a1a1a;
+  height:48px;
+  font-family:Helvetica;
+  font-weight:bold;
+  border: 2px solid #1a1a1a;
+}
+
+
+.datepicker-days table{
+  width:100% !important;
+  font-size:14px;
+}
+
+.datepicker{
+  width:309px !important;
+}
+
+
+.filters .filter-tag{
+  background:#FFF;
+  margin-left:20px;
+  padding-top:0px;
+  font-family:Helvetica;
+  font-weight:bold;
+  color:#1a1a1a;
+  text-transform:uppercase;
+  border:2px solid #1a1a1a;
+  display:inline-block;
+  padding:0 20px 0 20px;
+  vertical-align:middle;
+  top:0px;
+}
+
+.filters .filter-tag i{
+  font-size:26px;
+  line-height:50px;
+  margin-right:10px;
+  color:#1a1a1a;
+  top:0px;
+  top:2px;
+  position:relative;
+  vertical-align:middle;
+}
+
+
+
+.affix.filters {
+  top: 0;
+  width: 100%;
+  margin-top: 0px !important;
+  background:#FFF;
+  display:block;
+  z-index: 9999 !important;
+  padding:10px 0px 10px 0px;
+}
+
+
+
+.single-card:hover .list-number{
+  background:#E1192C
+}
+
+.affix.sticky-mpu  {
+  top: 322px;
+
+}
+
+.affix.filters + .affix-spacer{
+  margin-top: 90px !important;
+}
+
+.affix.lhs + img{
+  margin-top:280px;
+}
+
+.affix.lhs img{
+  margin-bottom:10px;
+}
+
+
+.lists-card .card-content{
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+  border:2px solid rgba(255,255,255,0);
+}
+
+.tags .tag{
+  margin-right:7px;
+  background:#F8F8F8;
+  height: 50px;
+    width: 50px;
+    display: inline-block;
+  text-align:center;
+  display:inline;
+  border:1px solid #DDDDDD;
+  vertical-align:middle;
+}
+
+.tags{
+  display:inline-block;
+}
+
+.book-btn{
+    margin-top:10px;
+    background:#1a1a1a;
+    line-height:50px;
+    font-weight:bold;
+    color:#FFF;
+    padding:0px 50px 0px 50px;
+    float:right;
+    height:50px;
+    text-transform:uppercase;
+    outline:none;
+
+    letter-spacing:4px;
+}
+
+.book-btn:focus, .book-btn:visited, .book-btn:active, .book-btn:hover{
+  background:#E1192C !important;
+  color:#FFF !important;
+  outline:none !important;
+}
+
+.location{
+  display:block;
+  clear:both;
+  font-size:13px;
+  font-family:Helvetica;
+  line-height:25px;
+  height:30px;
+  margin-right:16px;
+  vertical-align: middle;
+  margin-top:8px;
+}
+
+.location .icon-location{
+  font-size:13px;
+  line-height:25px;
+  margin-right:6px;
+  height:30px;
+  vertical-align: middle;
+}
+
+.location a{
+  color: #E1192C;
+  font-weight:bold;
+}
+
+.location a:hover{
+  color: #E1192C;
+  text-decoration:underline;
+}
+
+.newsletter{
+  margin-top:30px;
+  padding:30px 20px 30px 20px;
+  width:300px;
+  background:url('../img/newsletter-bg.jpg') no-repeat;
+  background-size:cover;
+  color:#FFF;
+}
+
+.newsletter h4{
+  font-size:22px;
+  font-family:"FranklinGothicLTCom_Dm";
+}
+
+.newsletter p{
+  font-size:16px;
+  line-height:22px;
+}
+
+.newsletter input{
+  border-radius:4px;
+  padding-left:13px !important;
+  color:#000;
+  height:40px;
+  margin-top:10px;
+  line-height:40px;
+  font-size:14px;
+  font-family: Helvetica;
+  padding:5px;
+  border:none;
+  width:260px;
+  outline:0px !important;
+}
+
+.newsletter::-webkit-input-placeholder {text-indent:20px!important;}
+.newsletter:-moz-placeholder { text-indent:20px!important;}
+.newsletter::-moz-placeholder {text-indent:20px!important;}
+.newsletter:-ms-input-placeholder {text-indent:20px!important;}
+
+
+.newsletter .btn{
+  height:40px;
+  margin-top:14px;
+  width:260px;
+  font-family:Helvetica;
+  font-size:12px;
+  letter-spacing: 4px;
+  outline:0px !important;
+  text-transform:uppercase;
+  font-weight:bold;
+  background:#E1192C;
+  color:#FFF;
+}
+
+.newsletter .btn:hover{
+  background:#9c111f;
+}
+
+@media (min-width: 320px) {
+  .book-btn{
+    margin-top:3px;
+  }
+  .location{
+    font-size:13px;
+    margin-bottom:10px
+  }
+
+
+  h3.title:after {
+    right: 5px;
+    padding-top: -5px;
+    font-size: 20px;
+  }
+
+
+  .to-says .icon-star{
+    font-size:14px;
+    line-height:25px;
+  }
+    .to-says{
+      font-size:13px;
+    }
+
+  .location{
+    font-size:13px;
+    margin-bottom:10px
+  }
+
+  .location .icon-location{
+    font-size:13px;  }
+
+  .tags{
+    margin-top:5px;
+    height:40px;
+  }
+
+  .tags .tag{
+    padding:5px;
+    font-size:20px;
+  }
+
+  .tags .tag-free{
+    font-size:23px;
+    padding:4px;
+  }
+
+
+  h3.title{
+  font-size:20px;
+  color:#1a1a1a;
+  margin-top: 0px;
+  line-height:28px;;
+  margin-bottom:9px;
+  }
+
+  p{
+    font-size:14px;
+    font-family:Georgia;
+    line-height:23px;
+  }
+
+  .single-card{
+    cursor:pointer;
+  }
+
+.single-card .card-content{
+    border:2px solid rgba(255,255,255,0);
+  }
+
+  .single-card:hover img, .single-card:hover .card-content{
+    border:2px solid #E1192C;
+    margin-top:-2px;
+  }
+
+  .single-card:hover img{
+    border-bottom:2px solid rgba(255,255,255,0);
+  }
+
+  .single-card:hover .card-content{
+    border-top:2px solid rgba(255,255,255,0);
+  }
+
+  .lists-card .list-number{
+    margin:0px;
+  }
+
+  .lists-card .card-content{
+    margin-left:0px;
+    padding:15px;
+  }
+
+
+  .filters .filter-tag{
+    height:40px;
+    font-size:13px;
+    line-height:40px;
+  }
+  .filters .filter-tag i{
+    line-height:40px;
+    font-size:20px;
+  }
+
+  .filters .filter-tag i.icon-family-friendly{
+    font-size:29px;
+    top:4px;
+  }
+
+  .left-hand{
+    display:none;
+  }
+
+  .lists-card{
+    float:left;
+    position: relative;
+    margin: 20px 0px 20px 0px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .intro-author, .intro-date{
+    text-align:left;
+    padding-left:60px;
+  }
+
+  .intro-avatar{
+    float:left;
+    width:50px;
+    height:50px;
+    margin-top:0px;
+  }
+
+  .intro h1{
+    font-size:36px;;
+    line-height:44px;
+    text-align:left;
+  }
+
+  .intro h2{
+    font-size:16px;
+    line-height:25px;
+    text-align:left;
+  }
+  .container{
+    width:100%;
+  }
+
+  .filters{
+    margin-top: 0px;
+    overflow-x: scroll;
+    height: 60px;
+    overflow-y: hidden;
+    width: auto;
+    white-space: nowrap;
+  }
+
+}
+@media (min-width: 480px) {
+
+  .intro-author, .intro-date{
+    text-align:center;
+    padding-left:0px;
+  }
+
+  .intro-avatar{
+    float:none;
+    width:60px;
+    height:60px;
+    margin:0 auto;
+    margin-top:30px;
+
+  }
+
+  .intro h1{
+    font-size:56px;
+    line-height:60px;
+    text-align:center;
+  }
+  .intro h2{
+    font-size:18px;
+    line-height:28px;
+    text-align:center;
+  }
+
+}
+@media (min-width: 768px) {
+
+  .book-btn{
+    margin-top:15px;
+  }
+  .location{
+    font-size:13px;
+    margin-bottom:0px;
+  }
+
+  h3.title:after {
+    right: 10px;
+    padding-top: 0px;
+    font-size: 28px;
+  }
+  .to-says .icon-star{
+    font-size:19px;
+    line-height:25px;
+  }
+
+  .to-says{
+    font-size:15px;
+  }
+
+  .location{
+    font-size:14px;
+  }
+
+  .location .icon-location{
+    font-size:16px;
+  }
+
+  .tags{
+    margin-top:15px;
+    height:60px;
+  }
+
+  .tags .tag{
+    padding:12px;
+    font-size:24px;
+    line-height:30px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+  }
+
+  .tags .tag-free{
+    font-size:28px;
+    padding:10px;
+  }
+
+  .lists-card .card-content{
+    margin-left:0px;
+    padding:20px;
+  }
+
+  p{
+    font-size:16px;
+    font-family:Georgia;
+    line-height:25px;
+  }
+
+  h3.title{
+  font-size:28px;
+  margin-top: 0px;
+  line-height:35px;
+  margin-bottom:9px;
+  }
+
+  .filters .filter-tag{
+    height:50px;
+    line-height:50px;
+    font-size:14px;
+  }
+
+  .lists-card .list-number{
+    margin:2px 0px 0px 2px;
+  }
+
+  .filters .filter-tag i.icon-family-friendly{
+    font-size:40px;
+    top:4px;
+  }
+
+  .filters .filter-tag i{
+    line-height:50px;
+    font-size:26px;
+  }
+
+  .lists-card{
+    float:left;
+    position: relative;
+    margin: 50px 0px 20px 0px;
+  }
+  .left-hand{
+    display:inline-block;
+  }
+  .filters{
+    margin-top: 30px;
+    overflow-x: scroll;
+    height: 80px;
+    overflow-y: hidden;
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  .filters{
+    margin-top: 30px;
+    overflow-x: scroll;
+    height: 80px;
+    overflow-y: hidden;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .single-card img, .single-card .card-content{
+    border:2px solid rgba(255,255,255,0);
+  }
+
+
+  .single-card:hover img, .single-card:hover .card-content{
+    border:2px solid #E1192C;
+    margin-top:0px;
+  }
+
+  .single-card:hover img{
+    border-right:2px solid rgba(255,255,255,1);
+  }
+
+  .single-card:hover .card-content{
+    border-top:2px solid #E1192C;
+  }
+
+  .lists-card .card-content{
+    margin-left:-2px;
+  }
+
+
+
+
+
+}
+
+@media (min-width: 1200px) {
+  .left-hand{
+    visibility:visible;
+  }
+  .filters{
+    overflow-x: visible;
+    height: auto;
+    overflow-y: visible;
+    width: 100%;
+    white-space: wrap;
+  }
+
+  .container{
+    width: 1170px;
+  }
+}
