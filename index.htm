@@ -1206,6 +1206,12 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+
+$('.filter-tag').on('click', function() {
+   $(this).toggleClass('selected');
+});
+
+
 $(document).ready(function() {
   /*  $(".more" ).click(function() {
   $(this).closest('.info');

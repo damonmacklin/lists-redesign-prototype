@@ -456,6 +456,7 @@ h3.title:after {
   border-radius:4px;
   padding-top:0px;
   font-family:Helvetica;
+  cursor:pointer;
   font-weight:bold;
   color:#1a1a1a;
   text-transform:uppercase;
@@ -464,6 +465,15 @@ h3.title:after {
   padding:0 20px 0 20px;
   vertical-align:middle;
   top:0px;
+}
+
+.filters .filter-tag.selected{
+  background:#000;
+  color:#FFF;
+}
+
+.filters .filter-tag.selected i{
+  color:#FFF;
 }
 
 .filters .filter-tag i{
