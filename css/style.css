@@ -112,6 +112,9 @@ a:focus, a:hover {
   background:#F8F8F8;
 }
 
+.map-img{
+  outline:5px solid #F8F8F8;
+}
 
 .map-img:hover:after{
   position:absolute;
