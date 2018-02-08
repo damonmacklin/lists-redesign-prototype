@@ -130,6 +130,7 @@ a:focus, a:hover {
   padding-top:90px;
   height:212px;
   width:300px;
+  cursor:pointer;
   font-size:16px;
   background:rgba(0,0,0,0.6);
   font-weight:bold;
