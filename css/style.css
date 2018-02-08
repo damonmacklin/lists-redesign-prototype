@@ -238,7 +238,7 @@ a:focus, a:hover {
 }
 
 .lhs{
-  margin:50px 0px 20px -3px;
+  margin:50px 0px 20px 0px;
 
 }
 
@@ -488,7 +488,6 @@ h3.title:after {
 
 .affix.sticky-mpu  {
   top: 322px;
-  margin-left:-3px;
 
 }
 
