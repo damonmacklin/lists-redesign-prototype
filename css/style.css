@@ -13,12 +13,19 @@
 .billboard img{
   padding:10px 0px 10px 0px;
 }
+
+.leaderboard{
+  margin:40px 0px 0px 0px;
+  text-align:center;
+}
 .info-wrapper {
   height: auto;
   margin: 0 auto;
   padding: 0 0 20px 0;
   position: relative;
 }
+
+
 
 .info-wrapper span.more{
   top:56px;
@@ -525,7 +532,6 @@ h3.title:after {
     font-weight:bold;
     color:#FFF;
     padding:0px 50px 0px 50px;
-    float:right;
     height:50px;
     text-transform:uppercase;
     outline:none;
@@ -630,6 +636,8 @@ h3.title:after {
 @media (min-width: 320px) {
   .book-btn{
     margin-top:3px;
+    float:none;
+
   }
   .location{
     font-size:13px;
@@ -819,6 +827,8 @@ h3.title:after {
 
   .book-btn{
     margin-top:15px;
+    float:right;
+
   }
   .location{
     font-size:13px;
